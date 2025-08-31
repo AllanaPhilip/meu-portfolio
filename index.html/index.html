@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mim — Portfólio</title>
+  <meta name="description" content="Portfólio pessoal — Sobre mim, formação, trabalhos e contato.">
+
+  <!-- Link para o CSS principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <!-- Logo e link para a página inicial -->
+    <a class="brand" href="index.html" aria-label="Voltar para o início">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Meu Portfólio</span>
+    </a>
+
+    <!-- Menu de navegação principal -->
+    <nav class="menu">
+      <a href="index.html" class="active">Sobre mim</a>
+      <a href="formacao.html">Formação</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Seção de apresentação pessoal -->
+  <section class="card">
+    <h1>Olá! Eu sou Allana Caroline Philip Alves!</h1>
+    <p>Sou estudante de Biologia e iniciante em programação. Tenho interesse em desenvolvimento web e estou construindo este site como atividade prática da disciplina Fundamentos da Programação Web.</p>
+
+    <p>Hobbies e interesses:</p>
+    <p>Tenho grande interesse por música, tanto na apreciação quanto no aprendizado de novos estilos e culturas musicais. Gosto de leitura, especialmente de temas relacionados ao desenvolvimento pessoal, tecnologia e ficção, que estimulam minha criatividade e visão crítica.</p>
+    <p>A tecnologia é uma das minhas paixões, sempre busco acompanhar inovações e tendências digitais. Também valorizo o contato com a natureza, que me ajuda a manter equilíbrio e bem-estar. Além disso, tenho curiosidade em aprender coisas novas, sejam habilidades práticas, conhecimentos acadêmicos ou experiências culturais diferentes.</p>
+    <p>Atualmente, estou focada em praticar e desenvolver habilidades em HTML, CSS e JavaScript, com o objetivo de criar páginas e aplicações web funcionais, aprimorar minhas capacidades de programação front-end e construir uma base sólida para projetos pessoais e profissionais na área de desenvolvimento.</p>
+  </section>
+
+  <!-- Seção explicando o conteúdo do site -->
+  <section class="card">
+    <h2>O que você encontra aqui</h2>
+    <ul class="list-check">
+      <li>Minha formação acadêmica e idiomas.</li>
+      <li>Projetos e atividades que já desenvolvi.</li>
+      <li>Um formulário de contato para falar comigo.</li>
+    </ul>
+  </section>
+
+  <!-- Seção explicando como o site foi feito -->
+  <section class="card">
+    <h2>Como este site foi feito</h2>
+    <p>Este site foi desenvolvido com HTML5 e CSS puro, seguindo as orientações da atividade. 
+       O menu é fixo e aparece em todas as páginas, e todos os códigos contêm comentários explicativos para fins acadêmicos.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <!-- Ano atualizado automaticamente via JavaScript -->
+    <p>© <span id="ano"></span> Allana Philip — Portfólio pessoal. Feito com HTML5 e CSS.</p>
+    <p><a href="contato.html">Fale comigo</a></p>
+  </div>
+</footer>
+
+<!-- Script JS para funcionalidades -->
+<script src="script.js"></script>
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio — Trabalhos</title>
+  <meta name="description" content="Portfólio com projetos e atividades.">
+  <!-- Link para o CSS principal -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <!-- Logo e link para a página inicial -->
+    <a class="brand" href="index.html" aria-label="Voltar para o início">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Meu Portfólio</span>
+    </a>
+
+    <!-- Botão para alternar menu em telas menores -->
+    <button data-menu aria-label="Abrir/Fechar menu" style="display:none">Menu</button>
+
+    <!-- Menu de navegação principal -->
+    <nav class="menu">
+      <a href="index.html">Sobre mim</a>
+      <a href="formacao.html">Formação</a>
+      <a href="portfolio.html" class="active">Portfólio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Seção introdutória do portfólio -->
+  <section class="card">
+    <h1>Portfólio</h1>
+    <p>Abaixo estão alguns exercícios que pratiquei durante o curso.</p>
+  </section>
+
+  <!-- Seção com projetos/atividades -->
+  <section class="grid">
+    <article class="card">
+      <h2>Projeto 1</h2>
+      <p>FUNDAMENTOS DE DESENVOLVIMENTO DE SOFTWARE</p>
+      <p>Projeto: Criação de site</p>
+      <p>
+        <a href="https://allanaphilip.github.io/Trabalho-TI/index.html" target="_blank" rel="noopener">
+          Link do projeto 1 (Link Externo)
+        </a>
+      </p>
+    </article>
+
+    <article class="card">
+      <h2>Projeto 2</h2>
+      <p>LÓGICA DE PROGRAMAÇÃO E ALGORITMOS</p>
+      <p>Estudo de técnicas para resolver problemas de forma estruturada, usando sequência, decisão, repetição e algoritmos claros e finitos.</p>
+      <p>
+        <a href="Trabalho-TI.pdf" download>
+          Link do projeto (Em PDF)
+        </a>
+      </p>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <!-- Ano atualizado automaticamente -->
+    <p>© <span id="ano"></span> Allana Philip — Portfólio pessoal. Feito com HTML5 e CSS.</p>
+    <p><a href="contato.html">Fale comigo</a></p>
+  </div>
+</footer>
+
+<!-- Script JS para funcionalidade do menu -->
+<script src="script.js"></script>
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

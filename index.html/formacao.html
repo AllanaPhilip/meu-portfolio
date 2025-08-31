@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formação — Portfólio</title>
+  <meta name="description" content="Formação acadêmica e idiomas.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <!-- Logo com link para página inicial -->
+    <a class="brand" href="index.html" aria-label="Voltar para o início">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Meu Portfólio</span>
+    </a>
+
+    <!-- Botão para alternar menu em telas pequenas -->
+    <button data-menu aria-label="Abrir/Fechar menu" style="display:none">Menu</button>
+
+    <!-- Menu de navegação principal -->
+    <nav class="menu">
+      <a href="index.html">Sobre mim</a>
+      <a href="formacao.html" class="active">Formação</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <!-- Seção principal de formação acadêmica -->
+  <section class="card">
+    <h1>Formação e Idiomas</h1>
+    <p>
+      Graduação: • Tecnólogo em Análise e Desenvolvimento De Sistemas (UNINTER) Cursando – Previsão de conclusão: Maio/2026<br>
+      Graduação: • Bacharelado em Ciências Biológicas (UNINTER) Cursando – Previsão de conclusão: Dezembro/2027
+    </p>
+
+    <div class="grid">
+      <!-- Lista de cursos e certificações -->
+      <div class="card">
+        <h2>Cursos e Certificações</h2>
+        <ul class="list-check">
+          <li>Liderança na Gestão de Equipes</li>
+          <li>Técnicas de Vendas e Pós-Vendas</li>
+          <li>Treinamento em Sistemas Operacionais (Windows e Linux)</li>
+          <li>Pacote Office – Nível Avançado</li>
+          <li>Estratégias de negociação</li>
+          <li>Comunicação nas organizações</li>
+        </ul>
+      </div>
+
+      <!-- Lista de idiomas -->
+      <div class="card">
+        <h2>Idiomas</h2>
+        <ul class="list-check">
+          <li>Português — Nativo</li>
+          <li>Inglês — Fluente</li>
+          <li>Espanhol — Básico</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de interesses acadêmicos -->
+  <section class="card">
+    <h2>Interesses acadêmicos</h2>
+    <p>
+      Meus interesses acadêmicos concentram-se na interseção entre tecnologia e ciências biológicas, com foco no desenvolvimento de soluções que integrem sistemas computacionais à análise de dados científicos. Busco aprofundar conhecimentos em programação, análise de sistemas e gestão de informações, aplicando essas habilidades para otimizar processos, automatizar tarefas e apoiar pesquisas em Biologia. Além disso, possuo interesse em explorar metodologias de atendimento ao cliente e comunicação organizacional, visando práticas eficientes em ambientes corporativos e acadêmicos. A integração entre competências tecnológicas e biológicas reflete meu compromisso com abordagens multidisciplinares, capazes de gerar resultados relevantes e inovadores.
+    </p>
+  </section>
+
+  <!-- Seção de experiências profissionais -->
+  <section class="card">
+    <h2>Experiências profissionais</h2>
+    <ul class="list-check">
+      <li><strong>Vendedora – JULIA COMERCIAL LTDA | Jul/2018 – Nov/2019</strong><br>
+          Atendimento ao cliente no varejo e atacado, relacionamento com lojistas, foco em vendas, fidelização e suporte pós-venda.</li>
+
+      <li><strong>Analista de Vendas – UNINTER | Jul/2024 – Fev/2025</strong><br>
+          Prospecção e atendimento de alunos, orientação e matrícula, com atendimento humanizado.</li>
+
+      <li><strong>Agente de Call Center – Retenção/Receptivo – DBM | Nov/2024 – Atual</strong><br>
+          Atendimento a clientes com foco em retenção e suporte financeiro, colaboração com equipe e liderança.</li>
+
+      <li><strong>Agente de Call Center – Backoffice/CRV – Tahto | Jan/2020 – Mar/2024</strong><br>
+          Atendimento multicanal, gestão de chamados, suporte técnico/comercial, apoio à supervisão.</li>
+
+      <li><strong>Agente de Call Center – Ativo/Receptivo – Plansul | Ago/2024 – Nov/2024</strong><br>
+          Atendimento via voz e chat para serviços e produtos financeiros, com foco em excelência.</li>
+
+      <li><strong>Bartender / Auxiliar de Caixa / Disk Entregas – Churrascaria Bota Fogo | Mar/2016 – Nov/2017</strong><br>
+          Atendimento e suporte em diversas funções operacionais.</li>
+
+      <li><strong>Cozinheira Geral – Mercearia Anos 30 / Marchelli Pizzas Pasta Bar | Mar/2007 – Ago/2015</strong><br>
+          Preparação e organização de alimentos, manutenção do ambiente de trabalho.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="ano"></span> Allana Philip — Portfólio pessoal. Feito com HTML5 e CSS.</p>
+    <p><a href="contato.html">Fale comigo</a></p>
+  </div>
+</footer>
+
+<!-- Script JS para funcionalidade do menu -->
+<script src="script.js"></script>
+<script>
+  // Atualiza o ano automaticamente
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <span class="dot"></span>
+      <span>Allana Philip</span>
+    </a>
+    <button data-menu style="display:none">Menu</button>
+    <nav class="menu">
+      <a href="index.html">Sobre mim</a>
+      <a href="formacao.html">Formação</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html" class="active">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h1>Contato</h1>
+    <p>Preencha os campos abaixo para falar comigo!</p>
+    <form action="#" method="post" onsubmit="alert('Formulário de demonstração — apenas visual.'); return false;">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Outros contatos</h2>
+    <p>E-mail: allana.cpalves@gmail.com • Curitiba/PR</p>
+    <p>LinkedIn: 
+      <a href="https://www.linkedin.com/in/allana-caroline-philip-alves-0133a1295/" target="_blank">
+        Link do meu perfil
+      </a>
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="ano"></span> Allana Philip — Portfólio pessoal. Feito com HTML5 e CSS.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

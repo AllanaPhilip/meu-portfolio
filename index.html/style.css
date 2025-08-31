@@ -1,0 +1,209 @@
+/* =====================================================
+   style.css — Estilos simples, sem frameworks (somente css)
+   ===================================================== */
+
+/* Variáveis de cores para fácil manutenção do tema */
+:root {
+  --bg: #0f172a;        /* cor de fundo principal */
+  --panel: #111827;     /* cor dos cartões e painéis */
+  --text: #e5e7eb;      /* cor do texto principal */
+  --muted: #9ca3af;     /* cor de texto secundário */
+  --accent: #22d3ee;    /* cor de destaque primário */
+  --accent-2: #38bdf8;  /* cor de destaque secundário */
+}
+
+/* Reset básico e comportamento de rolagem suave */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+/* =======================
+   Corpo e fundo
+   ======================= */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: var(--text);
+  background-image: url('fundo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  line-height: 1.6;
+}
+
+/* Container centralizado */
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* =======================
+   Cabeçalho e menu de navegação
+   ======================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(17, 24, 39, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+}
+
+/* Logo ou marca */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Pontinho de destaque na marca */
+.brand .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* Links do menu */
+.nav a { color: var(--text); text-decoration: none; }
+
+.menu {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+/* Efeito ao passar o mouse */
+.menu a {
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.12s ease, background 0.2s ease;
+}
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Link ativo */
+.menu a.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #0b1220;
+  border-color: transparent;
+}
+
+/* =======================
+   Main e cartões de conteúdo
+   ======================= */
+main { padding: 1rem 0 3rem; }
+
+.card {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Títulos */
+h1 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); margin: 0.2rem 0 0.6rem; }
+h2 { font-size: clamp(1.2rem, 2vw, 1.4rem); margin: 1rem 0 0.6rem; color: var(--accent); }
+
+/* Parágrafos */
+p { margin: 0.6rem 0; }
+
+/* Layout em grid para cartões */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 720px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Lista com ícone de check */
+.list-check {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-check li {
+  margin: 0.4rem 0;
+  padding-left: 1.4rem;
+  position: relative;
+  color: var(--text);
+}
+.list-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-1px);
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* =======================
+   Formulário de contato
+   ======================= */
+form { display: grid; gap: 0.8rem; }
+
+label { font-size: 0.95rem; color: var(--muted); }
+
+input, textarea, button {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  background: #0b1220;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: var(--text);
+  outline: none;
+}
+
+textarea { min-height: 140px; resize: vertical; }
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #0b1220;
+  border: none;
+  transition: transform 0.1s ease, filter 0.15s ease;
+}
+button:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
+/* =======================
+   Rodapé
+   ======================= */
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.15);
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* =======================
+   Menu responsivo aberto
+   ======================= */
+.menu.open {
+  display: block; /* ou flex, dependendo do layout da sua .menu */
+}
